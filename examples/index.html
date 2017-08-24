@@ -1,0 +1,88 @@
+  <!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Formulario de Pagos - OMNI</title>
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="http://malsup.github.io/jquery.blockUI.js"></script>
+  <link href="../card-js.min.css" rel="stylesheet" type="text/css" />
+  <link href="../benefit.css" rel="stylesheet" type="text/css" />
+  <script src="../card-js.min.js"></script>
+  <script src="../benefit.js"></script>
+
+</head>
+
+<body class="container">
+  <div class="col-lg-offset-4 col-lg-4">
+    <div id="title"></div>
+    <div class="card-js" id="user-card" data-capture-name="true">
+      <input class="card-number my-custom-class">
+      <input class="name" id="the-card-name-id" placeholder="Name on card">
+      <input class="expiry-month">
+      <input class="expiry-year">
+      <input class="cvc">
+    </div>
+    <br>
+    <div>
+      <input class="btn pay" type="button" value="OPCIONES DE PAGO" onclick="getGateway()">
+    </div>
+    
+    <div id="custom-modals">
+      <!-- Modal istallments-->
+      <div class="modal fade" id="modal-installments" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog  modal-md" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Pago con tarjeta de crédito</h4>
+            </div>
+            <div class="modal-body">
+              <select id="installments" class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal istallments-->
+
+    <!-- Modal istallments-->
+    <div class="modal fade" id="modal-debit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog  modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Pago con Tarjeta de débito</h4>
+          </div>
+          <div class="modal-body">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Pagar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal istallments-->
+
+  </div>
+</body>
+
+</html>
